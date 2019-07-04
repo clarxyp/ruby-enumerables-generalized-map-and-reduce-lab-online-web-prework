@@ -19,7 +19,7 @@ def reduce(ary, start=nil)
   end
   
   while i < ary.length
-    sum = yield(sum, ary[i])
+    sum += ary[i]
     i += 1
   end
   
