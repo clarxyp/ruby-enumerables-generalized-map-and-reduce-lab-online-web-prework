@@ -9,6 +9,7 @@ end
 
 
 def reduce(ary, start=nil)
+  
   if start
     sum = start
     i = 0
@@ -16,9 +17,11 @@ def reduce(ary, start=nil)
     sum = ary[0]
     i = 1
   end
+  
   while i < ary.length
     sum = yield(sum, ary[i])
     i += 1
   end
+  
   sum
 end 
